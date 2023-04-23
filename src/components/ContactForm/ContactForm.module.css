@@ -1,14 +1,18 @@
 .title {
     display: block;
     margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 20px;
-    color: #0099ff;
+    color: #fffb00;
 }
 
 .input {
     display: block;
-    width: 200px;
+    width: 286px;
     padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 5px;
     margin-bottom: 10px;
     background-color: #fff;
@@ -21,7 +25,9 @@
 .button {
     width: 120px;
     margin-top: 10px;
-    padding: 10px;
+    margin-left: 90px;
+    margin-right: 90px;
+    padding: 10px;    
     font-size: 13px;
     background-color: #0099ff;
     color: #fffb00;

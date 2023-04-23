@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 
 import {addContact} from './../../redux/operations';
-import {selectContacts} from '../../redux/selectors';
+import {selectContacts } from '../../redux/selectors';
 import style from './ContactForm.module.css';
 
 const ContactForm = () => {    
@@ -40,7 +40,7 @@ const ContactForm = () => {
    
 return (
     <form onSubmit={handleSubmit}>
-        <label className={style.title}>Name
+        <label className={style.title}> Name
             <input className={style.input}                
                 type="text"
                 name="name"

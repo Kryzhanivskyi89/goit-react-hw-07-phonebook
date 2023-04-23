@@ -35,8 +35,7 @@ const ContactList = () => {
                         <button className={style.button} type="button" onClick={() => dispatch(deleteContact(id))} >Delete contact</button>
                     </li>
                 ))
-            };
-
+            }
         </ul>
     );
 };
