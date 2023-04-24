@@ -15,7 +15,6 @@ const ContactList = () => {
 
     const isLoading = useSelector(selectIsLoading);
     const error = useSelector(selectError);
-
     const contacts = useSelector(selectContacts);
     const filter = useSelector(selectFilter);
 

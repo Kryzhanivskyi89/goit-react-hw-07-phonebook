@@ -7,17 +7,15 @@ import style from './ContactForm.module.css';
 
 const ContactForm = () => {    
 
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  const [localState, setLocalState] = useState({ name: '', number: '' });
 
-    const [localState, setLocalState] = useState({ name: '', number: '' });
-
-    const handleChange = e => {
+  const handleChange = e => {
         const { name, value } = e.target;
         setLocalState(prevState => ({ ...prevState, [name]: value }));
-    };
+  };
 
   const { name, number } = localState;
-
   const contacts = useSelector(selectContacts);
 
   const checkContact = contacts.some(contact => {
@@ -68,7 +66,7 @@ return (
             Add contact
         </button>
     </form>
-    );
+  );
 };
 
 export default ContactForm;
