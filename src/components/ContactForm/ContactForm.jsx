@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
+import Notiflix from 'notiflix';
 
 import {addContact} from './../../redux/operations';
 import {selectContacts } from '../../redux/selectors';
@@ -29,11 +30,11 @@ const ContactForm = () => {
     e.preventDefault();
 
     checkContact
-      ? alert('This contact already exists')
-      : dispatch(addContact(localState));
-
-    setLocalState(() => ({ name: '', number: '' }));
-    e.target.reset();
+      ? (Notiflix.Notify.warning('This contact already exists'))
+      : dispatch(addContact(localState))
+    
+      && setLocalState(() => ({ name: '', number: '' }));
+      // e.target.reset();
   };
    
 return (
